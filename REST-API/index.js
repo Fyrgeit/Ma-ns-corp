@@ -3,7 +3,7 @@ import { cors } from "@elysiajs/cors"
 import mongoose, { Mongoose } from "mongoose";
 import { Employee, Warehouse, ProductInfo, Order } from "./models.js";
 
-const url = "mongodb+srv://mans:5mEbtC89mkbussB1@mans-corp.idc4qhl.mongodb.net/yippie?retryWrites=true&w=majority";
+const url = `mongodb+srv://mans:${Bun.env.CODE}@mans-corp.idc4qhl.mongodb.net/yippie?retryWrites=true&w=majority`;
 
 await mongoose.connect(url);
 console.log("Connected to " + mongoose.connection.name);
