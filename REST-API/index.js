@@ -8,8 +8,6 @@ const url = `mongodb+srv://mans:${Bun.env.CODE}@mans-corp.idc4qhl.mongodb.net/yi
 await mongoose.connect(url);
 console.log("Connected to " + mongoose.connection.name);
 
-//const db = await Bun.file("db.json").json();
-
 new Elysia()
     .use(cors())
     .get("/", () => "Wlecommie!")
